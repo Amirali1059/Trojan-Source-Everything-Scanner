@@ -43,7 +43,7 @@ malware_chars = [
 available_drives = [
     '%s:' % d for d in string.ascii_uppercase if os.path.exists('%s:' % d)]
 
-# scan all drives
+# Discover all drives
 scan_ext = tuple(scan_extentions)
 malware_files = []
 all_files = []
@@ -54,6 +54,8 @@ for drive in available_drives:
         all_files += [root+"\\"+file for file in files if file.lower().endswith(scan_ext)]
     print("Done!")
     print(f"found {len(all_files)} scanable files in drive {drive} ...")
+
+# scan all drives
 print(f"Scannig all founded files ...", end=" ")
 for file in all_files:
     print("|/-\\"[(int(time() % 1*4))], end="\b")
