@@ -17,8 +17,16 @@ print(
 )
 
 # Settings
-scan_extentions = [".py", ".pyw", ".ipynb",  ".cpp", ".c", ".hpp",
-                   ".h", ".o", ".java", ".php", ".htm", ".html", ".js", ".cs"]
+scan_extentions = [
+    ".py", ".pyw", ".ipynb", # python
+    ".cpp", ".c", ".hpp", ".h", ".o", # c/c++
+    ".axd", ".asx", ".asmx", ".ashx", ".aspx", ".asp", # asp .net
+    ".java", ".jsp", ".jspx", # java
+    ".php" , ".php4", ".php3", # php
+    ".htm", ".jhtml", ".shtml", ".rhtml", ".xhtml", ".html", ".xml", ".rss", ".svg" # html/xml
+    ".js", ".cs", ".css", # js/css
+    ".pl", ".rb", # ruby/perl/other
+    ]
 malware_chars = [
     '\u202A',
     '\u202B',
