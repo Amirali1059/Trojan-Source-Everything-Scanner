@@ -50,7 +50,7 @@ all_files = []
 for drive in available_drives:
     print(f"Discovering drive {drive} ...", end=" ")
     for root, dirs, files in os.walk(drive+"\\"):
-        print("|/-\\"[(int(time() % 1*4))], end="\b")
+        print("|/-\\"[(int(time() % 2*2))], end="\b")
         all_files += [root+"\\"+file for file in files if file.lower().endswith(scan_ext)]
     print("Done!")
 
@@ -59,7 +59,7 @@ print(f"found {len(all_files)} scanable files ...")
 # scan all drives
 print(f"Scannig all founded files ...", end=" ")
 for file in all_files:
-    print("|/-\\"[(int(time() % 1*4))], end="\b")
+    print("|/-\\"[(int(time() % 2*2))], end="\b")
     try:
         raw_code = open(file, "r", encoding="utf-8").read()
     except (UnicodeDecodeError, FileNotFoundError, PermissionError):
