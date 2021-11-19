@@ -70,7 +70,7 @@ for file in all_files:
             chrs = "char" if count == 1 else "chars"
             malware_files.append(f"found {count} \\u{ord(char):x} {chrs} in \"{file}\"!")
 print("Done!")
-print("\n    Scan Results:\n")
+print("\nScan Results:\n")
 print("\n".join(malware_files))
 print()
 os.system("pause")
